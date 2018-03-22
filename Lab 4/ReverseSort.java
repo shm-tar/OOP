@@ -4,7 +4,7 @@ public class Sort {
 			for (int i = gap; i < array.length; i++) {
 				int val = array[i];
 				int j;
-				for (j = i; j >= gap && comp.compare(array[j - gap], val) > 0; j -= gap) {
+				for (j = i; j >= gap && comp.compare(array[j - gap], val) < 0; j -= gap) {
 					array[j] = array[j - gap];
 				}
 				array[j] = val;
@@ -16,13 +16,11 @@ public class Sort {
 		int[] array = {1,5,2,4,10,6,0,3,10};
 		Comparator comp = new Comparator();
 		
-		//Change your code here
 		sort(array, comp);
-		//Change your code here
 		
 		for (int i = 0; i < array.length; i++) {
 			System.out.print(array[i] + " ");
 		}
 	}
 	
-}
+}    
