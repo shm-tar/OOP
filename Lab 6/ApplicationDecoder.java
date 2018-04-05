@@ -8,8 +8,6 @@ public class Application{
         if((input != "") && ((input.charAt(0) < '0') || ( input.charAt(0) > '9'))) {
             for (int i = 0; i < input.length(); i++) {
 
-               // char k = input.charAt(i);
-
                 if (i < input.length() - 1) {
                     if (input.charAt(i + 1) == input.charAt(i)) {
                         output = "";
