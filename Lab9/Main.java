@@ -1,7 +1,4 @@
-import ua.lpnuai.oop.Helper;
-
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Scanner;
@@ -9,7 +6,7 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static void main(final String[] args) throws FileNotFoundException, IOException, ClassNotFoundException
+    public static void main(final String[] args) throws IOException
     {
 
         show();
@@ -24,39 +21,31 @@ public class Main {
             a=s.nextInt();
             switch (a) {
                 case 1:
-                    System.out.println("Введіть новий елемент:");
+                    System.out.println("Enter your element:");
                     storage.add(read.readLine());
                     break;
                 case 2:
                     if (storage.remove(read.readLine())) {
 
-                        System.out.println("Елемент видалиний!");
+                        System.out.println("Element was deleted");
                     } else {
 
-                        System.out.println("Такого елемента не існує!");
+                        System.out.println("No such element present");
                     }
 
                     break;
                 case 3:
                     storage.clear();
-                    System.out.println("Контейнер був видалений!");
+                    System.out.println("Container was deleted");
                     break;
                 case 4:
                     System.out.println(storage.toString());
                     break;
-                case 5:
-                    storage.compare();
-                    break;
-                case 6:
+/*                case 5:
                     storage.sort((String[]) storage.toArray());
                     System.out.println(storage.toString());
-                    break;
-                case 7:
-                    System.out.println("---------");
-                    Helper.PrintSymbols(storage.toString());
-                    Helper.PrintSymbolNumbers(storage.toString());
-                    break;
-                case 8:
+                    break;*/
+                case 5:
                     System.out.print("Exit");
                     break;
                 default : break;
@@ -65,14 +54,11 @@ public class Main {
         s.close();
     }
     public static void show() {
-        System.out.println("Меню");
-        System.out.println("1. Додавання елемента");
-        System.out.println("2. Виделення елемента");
-        System.out.println("3. Очистка");
-        System.out.println("4. Вивід");
-        System.out.println("5. Порівняння");
-        System.out.println("6. Сортування");
-        System.out.println("7. Використання классу іншого студента");
-        System.out.println("8. Вихід");
+        System.out.println("Menu:");
+        System.out.println("1 -> Element Addition");
+        System.out.println("2 -> Element Deletion");
+        System.out.println("3 -> Clear All");
+        System.out.println("4 -> All Elements");
+        System.out.println("5 -> Exit");
     }
 }
