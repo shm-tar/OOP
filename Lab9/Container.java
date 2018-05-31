@@ -145,7 +145,7 @@ public class Container implements Iterable<String> {
 
         if (equalElems.isEmpty()) {
 
-            System.out.println("Немає однакових елементів");
+            System.out.println("No equal elements here");
         } else {
 
             countOfEqual++;
